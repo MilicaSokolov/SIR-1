@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Flower Classification</title>
+</head>
+<body>
+    <div class="container">
+        <form id="upload-form">
+            <h1>Flower Recognition Application</h1> <!-- Naslov aplikacije -->
+            
+            <input type="file" id="file-input" accept="image/*">
+            <br>
+            <img id="selected-image" src="static/select.jfif" alt="Selected image">
+            <div class="loader" id="loader"></div> <!-- Spiner element -->
+            <br>
+            <p id="pytorch-predicted-class" class="hidden">PyTorch Predicted class: <span></span></p> <!-- Prikaz PyTorch predikcije -->
+            <div class="button-container">
+                <button type="submit">Upload and Predict</button>
+                <label class="label-file" for="file-input">
+                    <img src="static/upload_icone.jpg" alt="Choose file" style="width: 50px; height: 50px;">
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
